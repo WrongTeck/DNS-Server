@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/dns2": "^1.4.0",
     "dns2": "^2.0.1",
-    "ioredis": "^4.27.9"
+    "ioredis": "^4.27.9",
+    "mongodb": "^4.1.2"
   }
 }
