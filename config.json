@@ -1,0 +1,12 @@
+{
+    "port": 5333,
+    "db": {
+        "mongo": {
+            "conn_uri":""
+        },
+        "redis": {
+            "host":"localhost",
+            "port": 6379
+        }
+    }
+}
