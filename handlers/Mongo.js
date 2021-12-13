@@ -7,7 +7,7 @@ class Mongo {
   init(params) {
     return new Promise((resolve, reject) => {
       mongo.MongoClient.connect(
-        this.url(params),
+        params,
         { useNewUrlParser: true },
         (err, client) => {
           if (err) {

@@ -1,12 +1,18 @@
 {
     "port": 5333,
-    "db": {
-        "mongo": {
-            "conn_uri":""
-        },
-        "redis": {
-            "host":"localhost",
-            "port": 6379
-        }
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "handler": "file",
+    "mongo": {
+        "conn_uri":""
+    },
+    "file": {
+        "path": "dns",
+        "ext": ".json"
+    },
+    "cache": {
+        "enabled": true,
+        "type": "redis",
+        "ttl": 3600,
+        "redis" : "redis://localhost:6379"
     }
 }

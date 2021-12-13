@@ -1,8 +1,8 @@
 const fs = require("fs");
-const Parser = require("../Parser");
+const Parser = require("./Parser");
 class JSONreader {
   /**
-   * Initialize a new instance of the JSON DNS builder
+   * Initialize a new instance of the JSON DNS builder 
    * @param {Object} options Options to pass
    * @returns {JSON_reader}
    */
@@ -54,6 +54,15 @@ class JSONreader {
     */
   getCache() {
     return this.cache;
+  }
+  get(name, cb) { 
+    var result = [];
+    this.cache.forEach((value, index, array) => {
+      if(value.get(name)) {
+        result.push(value.get(name));
+      }
+    });
+    cb(null, result);
   }
 }
 
